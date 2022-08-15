@@ -2,15 +2,17 @@ package com.jiajunzhang.invoicecreateor.invoice.item;
 
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
-@Table
+@Embeddable
 @NoArgsConstructor
-public class Item {
+public class Item implements Serializable {
     @Id
     private Long id;
     private String name;
