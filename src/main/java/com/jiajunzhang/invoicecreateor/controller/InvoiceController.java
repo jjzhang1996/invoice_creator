@@ -1,5 +1,7 @@
-package com.jiajunzhang.invoicecreateor.invoice;
+package com.jiajunzhang.invoicecreateor.controller;
 
+import com.jiajunzhang.invoicecreateor.model.invoice.Invoice;
+import com.jiajunzhang.invoicecreateor.model.invoice.InvoiceService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

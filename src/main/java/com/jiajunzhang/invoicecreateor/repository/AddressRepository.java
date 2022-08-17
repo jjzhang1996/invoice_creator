@@ -1,5 +1,6 @@
-package com.jiajunzhang.invoicecreateor.invoice.customer.address;
+package com.jiajunzhang.invoicecreateor.repository;
 
+import com.jiajunzhang.invoicecreateor.model.customer.address.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

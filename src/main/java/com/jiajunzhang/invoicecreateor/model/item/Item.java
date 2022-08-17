@@ -1,4 +1,4 @@
-package com.jiajunzhang.invoicecreateor.invoice.item;
+package com.jiajunzhang.invoicecreateor.model.item;
 
 import lombok.NoArgsConstructor;
 
@@ -9,8 +9,8 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+@Table
 @Entity
-@Embeddable
 @NoArgsConstructor
 public class Item implements Serializable {
     @Id

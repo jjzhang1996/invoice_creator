@@ -1,4 +1,4 @@
-package com.jiajunzhang.invoicecreateor.invoice.customer.address;
+package com.jiajunzhang.invoicecreateor.model.customer.address;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

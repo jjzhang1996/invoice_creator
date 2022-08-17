@@ -1,6 +1,5 @@
-package com.jiajunzhang.invoicecreateor.invoice.customer;
+package com.jiajunzhang.invoicecreateor.model.customer;
 
-import com.jiajunzhang.invoicecreateor.invoice.customer.address.Address;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,9 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.util.Set;
 
 @Entity
 @Table
@@ -26,7 +23,7 @@ public class Customer {
     private String name; //companyname
     private String email; // for future email sending
     private String uid;
-    @OneToMany
-    private Set<Address> addresses;
+//    @OneToMany
+//    private Set<Address> addresses;
 
 }

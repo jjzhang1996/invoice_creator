@@ -1,5 +1,6 @@
-package com.jiajunzhang.invoicecreateor.invoice.customer;
+package com.jiajunzhang.invoicecreateor.repository;
 
+import com.jiajunzhang.invoicecreateor.model.customer.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
