@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import LoginForm from "./containers/loginform";
+import {useEffect} from "react";
+import checkAuth from "./utils/checkAuth";
+import {useNavigate} from "react-router-dom"
 
 function App() {
+    // TODO: check if user already has token saved in LS
+    const navigate = useNavigate();
+    useEffect(() => {
+        const exist = localStorage.getItem("Bearer");
+        if(exist){
+            // setIsLogged(true);
+           checkAuth().then(auth => {
+               console.log(auth)
+               if(auth){
+                    // reroute
+                   navigate("/dashboard")
+               }
+               else{
+                    localStorage.removeItem("Bearer");
+               }
+           });
+
+        }
+    }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+        <LoginForm />
+    </main>
   );
 }
 

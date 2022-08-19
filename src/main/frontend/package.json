@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@mantine/core": "^5.1.6",
@@ -43,6 +43,7 @@
       "react-app/jest"
     ]
   },
+  "license": "UNLICENSED",
   "browserslist": {
     "production": [
       ">0.2%",
