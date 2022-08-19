@@ -1,8 +1,6 @@
 package com.jiajunzhang.invoicecreateor.model.webuser;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,9 +11,9 @@ import java.util.Collections;
 
 @Entity
 @Table
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 public class WebUser implements UserDetails {
     @Id
     @SequenceGenerator(

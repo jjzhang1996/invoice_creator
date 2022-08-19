@@ -1,9 +1,14 @@
 package com.jiajunzhang.invoicecreateor.model.customer.address;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity
+@Entity(name = "customer_address")
+@Table(name = "customer_address")
+@Data
 public class Address {
     @Id
     private Long id;

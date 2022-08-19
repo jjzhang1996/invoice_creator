@@ -1,6 +1,6 @@
 package com.jiajunzhang.invoicecreateor.model.item;
 
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -9,8 +9,11 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-@Table
-@Entity
+@Table(name = "article")
+@Entity(name = "article")
+@Getter
+@Setter
+@AllArgsConstructor
 @NoArgsConstructor
 public class Item implements Serializable {
     @Id
@@ -20,13 +23,5 @@ public class Item implements Serializable {
     private BigDecimal brutto; // calc brutto from netto and taxPercentage
     private BigDecimal tax;
     private double taxPercentage;
-
-    public Item(String name, BigDecimal netto, BigDecimal brutto, double taxPercentage) {
-        this.name = name;
-        this.netto = netto;
-        this.brutto = brutto;
-        this.taxPercentage = taxPercentage;
-    }
-    // future updates maybe include instock ?
 
 }

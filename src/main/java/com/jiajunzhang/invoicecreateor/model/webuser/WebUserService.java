@@ -21,7 +21,8 @@ public class WebUserService implements UserDetailsService{
     private final WebUserRepository webUserRepository;
     @Autowired
     private PasswordEncoder encoder;
-    private final JwtUtils jwtUtils;
+
+    private JwtUtils jwtUtils;
     private final static String USER_NOT_FOUND_MSG = "User with username %s not found";
 
     @Override
